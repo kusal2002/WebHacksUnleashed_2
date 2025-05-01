@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IDOR Demo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>User Profile</h2>
+        <p>Username: {{ user }}</p>
+        <p>Email: {{ email }}</p>
+    </div>
+</body>
+</html>

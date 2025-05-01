@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>XSS Demo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Search</h2>
+        <form method="get">
+            <input type="text" name="q" placeholder="Search query">
+            <button type="submit">Search</button>
+        </form>
+        {% if q %}
+        <p>Results for: {{ q|safe }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
